@@ -1,0 +1,17 @@
+.bgImg{
+    background-image: url(/src/Assets/grad.png);
+  }
+
+  .textColor{
+
+    color: white;
+  }
+
+  .jumbotronColor{
+    background-color: honeydew;
+  }
+
+  li {
+    list-style-type : '';
+  }
+  
