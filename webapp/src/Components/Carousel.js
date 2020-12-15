@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 class CarouselView extends React.Component {
 	render() {
 		return (
-			<Container>
 				<Carousel>
 					<Carousel.Item>
 						<img className="d-block w-100" src="./img1.jpg" alt="First slide" />
@@ -29,7 +28,6 @@ class CarouselView extends React.Component {
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>
-			</Container>
 		);
 	}
 }

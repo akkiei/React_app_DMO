@@ -1,16 +1,14 @@
 import React from 'react';
 import Jumbo from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
-
+import '../Css/App.css';
 class Footer extends React.Component {
 	render() {
 		return (
-			<div>
-				<Jumbo  >
-					<Container>
-						<h3>{this.props.heading}</h3>
-						<p>There's noone to contact !!! </p>
-					</Container>
+			<div className="footer">
+				<Jumbo>
+					<h3>{this.props.heading}</h3>
+					<p>There's noone to contact !!! </p>
 				</Jumbo>
 			</div>
 		);

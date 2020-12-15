@@ -1,17 +1,32 @@
-.bgImg{
-    background-image: url(/src/Assets/grad.png);
-  }
+.bgImg {
+	background-image: url(/src/Assets/grad.png);
+  background-size : auto;
+  background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+}
 
-  .textColor{
+.textColor {
+	color: white;
+}
 
-    color: white;
-  }
+.jumbotronColor {
+	position: relative;
+	background-color: honeydew;
+}
+.form{
+  position: relative;
 
-  .jumbotronColor{
-    background-color: honeydew;
-  }
+}
 
-  li {
-    list-style-type : '';
-  }
-  
+li {
+	list-style-type: '';
+}
+
+.footer {
+  position:relative;
+  left:0;
+  bottom:0;
+  right:0;
+
+}

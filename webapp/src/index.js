@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Css/App.css';
 
 ReactDOM.render(
-	<React.StrictMode>
+	<div className="bgImg">
 		<App />
-	</React.StrictMode>,
+	</div>,
 	document.getElementById('root')
 );
 

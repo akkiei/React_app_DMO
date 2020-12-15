@@ -15,8 +15,10 @@ class Jumbotron extends React.Component {
 				<div>
 					<h1>{this.props.heading}</h1>
 					<p>
-						<Button href="/login" variant="primary">Login</Button> to dontMissOut to check all your notifications from
-						anywhere in the world.
+						<Button href="/login" variant="primary">
+							Login
+						</Button>{' '}
+						to dontMissOut to check all your notifications from anywhere in the world.
 					</p>
 				</div>
 			);
@@ -28,10 +30,18 @@ class Jumbotron extends React.Component {
 				</div>
 			);
 		}
+		else if (currPath == 'Notfications') {
+			components = (
+				<div>
+					<h1>{this.props.heading}</h1>
+					<p>The list of all notifications from your phone.</p>
+				</div>
+			);
+		}
 		return (
 			<div>
 				<Jumbo fluid className="jumbotronColor">
-					<Container>{components}</Container>
+					{components}
 				</Jumbo>
 			</div>
 		);

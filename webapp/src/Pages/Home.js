@@ -9,12 +9,10 @@ import Container from 'react-bootstrap/Container';
 class Home extends React.Component {
 	render() {
 		return (
-			<div >
-				<Container>
-					<Jumbotron heading="Welcome, Adventurer !" path="Home"/>
-					<Carousel/>
-				</Container>
-				<Footer heading="Contact Us"/>
+			<div>
+				<Jumbotron heading="Welcome, Adventurer !" path="Home" />
+				<Carousel />
+				<Footer heading="Contact Us" />
 			</div>
 		);
 	}

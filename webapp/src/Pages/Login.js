@@ -4,18 +4,18 @@ import React from 'react';
 // import '../Css/App.css';
 import Container from 'react-bootstrap/Container';
 import LoginForm from '../Components/LoginForm';
-class Home extends React.Component {
+class Login extends React.Component {
 	render() {
 		return (
-			<div >
+			<div>
 				<Container>
-					<Jumbotron heading="Login to access" path="Login"/>
-                    <LoginForm/>
+					<Jumbotron heading="Login to access" path="Login" />
 				</Container>
+				<LoginForm />
 				<Footer />
 			</div>
 		);
 	}
 }
 
-export default Home;
+export default Login;
