@@ -3,7 +3,7 @@ import './Css/App.css';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Notifications from './Pages/Notification';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends React.Component {
 	render() {
 		return (

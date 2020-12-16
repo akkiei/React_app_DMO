@@ -1,7 +1,6 @@
 import React from 'react';
 import NotifList from '../Components/ListItem';
 import Jumbotron from '../Components/Jumbotron';
-import { Container } from 'react-bootstrap';
 
 class Notifications extends React.Component {
 	constructor(props) {
@@ -22,24 +21,17 @@ class Notifications extends React.Component {
 				App: 'com.ghanta.popo',
 				Time: '15/12/2020 4:41 PM',
 				Title: 'Topi chooter',
+				Text: 'topi choor ke laddu',
+				More: 'Some more text here '
+			},
+			{
+				App: 'com.ghanta.popo',
+				Time: '15/12/2020 4:41 PM',
+				Title: 'Topi chooter',
 				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
 				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
+            },
+            {
 				App: 'com.ghanta.popo',
 				Time: '15/12/2020 4:41 PM',
 				Title: 'Topi chooter',
@@ -59,162 +51,8 @@ class Notifications extends React.Component {
 				Title: 'Topi chooter',
 				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
 				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddutopi choor ke laddutopi choor ke laddutopi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
-				App: 'com.ghanta.popo',
-				Time: '15/12/2020 4:41 PM',
-				Title: 'Topi chooter',
-				Text: 'topi choor ke laddu',
-				More: 'Some more text here '
-			},
-			{
+            },
+            {
 				App: 'com.ghanta.popo',
 				Time: '15/12/2020 4:41 PM',
 				Title: 'Topi chooter',

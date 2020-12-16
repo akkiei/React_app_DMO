@@ -6,11 +6,18 @@ import Pagination from 'react-bootstrap/Pagination';
 class ListItem extends React.Component {
 	constructor(props) {
 		super(props);
-		// this.packageName = this.props.packageName || '';
-		// this.postTime = this.props.postTime || '';
-		// this.contentTitle = this.props.contentTitle || '';
-		// this.contentText = this.props.contentText || '';
-		// this.tickerText = this.props.tickerText || '';
+
+		this.state = {
+			itemsToDisplay: [],
+			currPage: 1,
+			itemsPerPage: 10
+		};
+	}
+	componentDidMount() {
+		this.a = this.pagination();
+		this.setState({
+			pagination: this.a
+		});
 	}
 
 	formListGroupItems(singleNotifJSON) {
@@ -19,12 +26,12 @@ class ListItem extends React.Component {
 			const item = <ListGroup.Item variant="dark" key={key}>{`${key} : ${singleNotifJSON[key]}`}</ListGroup.Item>;
 			listGroupItems.push(item);
 		});
-
 		return listGroupItems;
 	}
 
-	formListGroup() {
+	formListGroup = () => {
 		const list = [];
+
 		for (let index = 0; index < this.props.result.length; index++) {
 			const singleNotifJSON = this.props.result[index];
 			const listGroupItems = this.formListGroupItems(singleNotifJSON);
@@ -37,56 +44,70 @@ class ListItem extends React.Component {
 			);
 			list.push(listGroup);
 		}
+		this.firstTimeRenderList(list);
 		return list;
-	}
+	};
+
+	firstTimeRenderList = (resultList) => {
+		if (resultList.length <= 10) {
+			this.setState({
+				itemsToDisplay: resultList
+			});
+		} else {
+			this.setState({
+				itemsToDisplay: resultList.slice(0, 10)
+			});
+		}
+	};
+
+	clickOnPage = (noOfPages, resultList, event) => {
+		let currPageSelected;
+		if (Object.prototype.hasOwnProperty.call(event, 'target')) {
+			currPageSelected = Number(event.target.id);
+		} else {
+			currPageSelected = this.state.currPage;
+		}
+		if (currPageSelected === noOfPages) {
+			this.setState({
+				itemsToDisplay: resultList.slice((currPageSelected - 1) * 10),
+				currPage: Number(currPageSelected)
+			});
+		} else {
+			this.setState({
+				itemsToDisplay: resultList.slice((currPageSelected - 1) * 10, (currPageSelected - 1) * 10 + 10),
+				currPage: Number(currPageSelected)
+			});
+		}
+	};
 	pagination() {
 		const resultList = this.formListGroup();
-		const sizePerView = resultList.length / 10;
+		const noOfPages = Math.ceil(resultList.length / this.state.itemsPerPage);
 
-		let active = 1;
-		let items = [];
-		const final = [];
-
-		for (let number = 1; number <= sizePerView; number++) {
-			for (let index = (number - 1) * 10; index < number * 10; index++) {
-				const element = resultList[index];
-				items.push(
-					<Pagination.Item key={index} active={index === active}>
-						{element}
-					</Pagination.Item>
-				);
-			}
-			final.push(items);
-			items = [];
-		}
-		const lastIndex = sizePerView * 10;
-		for (let index = lastIndex; index < resultList.length; index++) {
-			const element = lastIndex[index];
-			items.push(
-				<Pagination.Item key={index} active={index === active}>
-					{element}
+		const pagination = [];
+		for (let index = 1; index <= noOfPages; index += 1) {
+			pagination.push(
+				<Pagination.Item
+					onClick={(event) => this.clickOnPage(noOfPages, resultList, event)}
+					key={index}
+					active={index === this.state.currPage}
+					id={index}
+				>
+					{index}
 				</Pagination.Item>
 			);
 		}
-		final.push(items);
+		const finalPaginationList = <Pagination>{pagination}</Pagination>;
 
-		const paginationBasic = (
-			<div>
-				<Pagination>{final}</Pagination>
-				{/* <br />
-
-				<Pagination size="lg">{final}</Pagination>
-				<br />
-
-				<Pagination size="sm">{final}</Pagination> */}
-			</div>
-		);
-		return paginationBasic;
+		return finalPaginationList;
 	}
 
 	render() {
-		const resultList = this.formListGroup();
-		return <div>{resultList}</div>;
+		return (
+			<div>
+				<Container>{this.state.itemsToDisplay}</Container>
+				<Container>{this.state.pagination}</Container>
+			</div>
+		);
 	}
 }
 export default ListItem;

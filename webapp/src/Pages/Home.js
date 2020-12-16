@@ -4,7 +4,6 @@ import Carousel from '../Components/Carousel';
 import Footer from '../Components/Footer';
 import React from 'react';
 // import '../Css/App.css';
-import Container from 'react-bootstrap/Container';
 
 class Home extends React.Component {
 	render() {

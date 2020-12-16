@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 
 class CarouselView extends React.Component {
 	render() {

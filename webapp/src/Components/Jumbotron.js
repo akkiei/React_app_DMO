@@ -1,6 +1,5 @@
 import React from 'react';
 import Jumbo from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import '../Css/App.css';
 class Jumbotron extends React.Component {
@@ -22,7 +21,7 @@ class Jumbotron extends React.Component {
 					</p>
 				</div>
 			);
-		} else if (currPath == 'Login') {
+		} else if (currPath === 'Login') {
 			components = (
 				<div>
 					<h1>{this.props.heading}</h1>
@@ -30,7 +29,7 @@ class Jumbotron extends React.Component {
 				</div>
 			);
 		}
-		else if (currPath == 'Notfications') {
+		else if (currPath === 'Notfications') {
 			components = (
 				<div>
 					<h1>{this.props.heading}</h1>
